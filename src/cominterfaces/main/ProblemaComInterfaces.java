@@ -1,4 +1,4 @@
-package seminterfaces.main;
+package cominterfaces.main;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,12 +6,12 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import seminterfaces.model.entidades.AluguelDeCarro;
-import seminterfaces.model.entidades.Veiculo;
-import seminterfaces.model.servicos.ServicoDeAluguel;
-import seminterfaces.model.servicos.ServicoDeImpostoBrasil;
+import cominterfaces.model.entidades.AluguelDeCarro;
+import cominterfaces.model.entidades.Veiculo;
+import cominterfaces.model.servicos.ServicoDeAluguel;
+import cominterfaces.model.servicos.ServicoDeImpostoBrasil;
 
-public class ProblemaSemInterfaces {
+public class ProblemaComInterfaces {
 	/*
 	 * Uma locadora brasileira de carros cobra um valor por hora para locações de até
 	 * 12 horas. Porém, se a duração da locação ultrapassar 12 horas, a locação será

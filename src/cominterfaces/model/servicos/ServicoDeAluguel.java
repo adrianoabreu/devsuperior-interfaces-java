@@ -1,7 +1,7 @@
-package seminterfaces.model.servicos;
+package cominterfaces.model.servicos;
 
-import seminterfaces.model.entidades.AluguelDeCarro;
-import seminterfaces.model.entidades.NotaDePagamento;
+import cominterfaces.model.entidades.AluguelDeCarro;
+import cominterfaces.model.entidades.NotaDePagamento;
 
 public class ServicoDeAluguel {
 	
@@ -9,16 +9,17 @@ public class ServicoDeAluguel {
 	private Double precoPorHora;
 	
 	//Associação de classes e objetos:
-	private ServicoDeImpostoBrasil servicoDeImpostoBrasil;
+	//private ServicoDeImpostoBrasil servicoDeImpostoBrasil;
+	private ServicoDeImposto servicoDeImposto;
 
 	public ServicoDeAluguel() {
 		
 	}
 	
-	public ServicoDeAluguel(Double precoPorDia, Double precoPorHora, ServicoDeImpostoBrasil servicoDeImpostoBrasil) {
+	public ServicoDeAluguel(Double precoPorDia, Double precoPorHora, ServicoDeImposto servicoDeImposto) {
 		this.precoPorDia = precoPorDia;
 		this.precoPorHora = precoPorHora;
-		this.servicoDeImpostoBrasil = servicoDeImpostoBrasil;
+		this.servicoDeImposto = servicoDeImposto;
 	}
 	
 	public void processarNotaDePagamento(AluguelDeCarro aluguelDeCarro) {
@@ -33,7 +34,7 @@ public class ServicoDeAluguel {
 			pagamentoBasico = Math.ceil(horas / 24) * precoPorDia;
 		}
 		
-		double imposto = servicoDeImpostoBrasil.calcularImposto(pagamentoBasico);
+		double imposto = servicoDeImposto.calcularImposto(pagamentoBasico);
 		
 		aluguelDeCarro.setNotaDePagamento(new NotaDePagamento(pagamentoBasico, imposto));
 	}

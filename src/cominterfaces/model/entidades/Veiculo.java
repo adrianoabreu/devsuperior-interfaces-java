@@ -1,4 +1,4 @@
-package seminterfaces.model.entidades;
+package cominterfaces.model.entidades;
 
 public class Veiculo {
 
